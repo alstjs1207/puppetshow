@@ -1,11 +1,11 @@
 # puppetshow
 
 ```console
-$ docker build . --tag [gcr fastcampus web services iolo puppetshow](gcr.io/fastcampus-web-services/iolo-puppetshow):latest
-$ docker push gcr.io/fastcampus-web-services/iolo-puppetshow:latest
+$ docker build . --tag gcr.io/YOUR_GCP_NAME/YOUR_GCR_NAME:latest
+$ docker push gcr.io/YOUR_GCP_NAME/YOUR_GCR_NAME:latest
 $ gcloud run deploy puppetshow \
---image=gcr.io/fastcampus-web-services/iolo-puppetshow:latest
+--image=gcr.io/YOUR_GCP_NAME/YOUR_GCR_NAME:latest
 --platform=managed \
---region=asia-northeast3 \
---project=fastcampus-web-services
+--region=YOUR_GCP_REGION \
+--project=YOUR_GCP_NAME
 ```
