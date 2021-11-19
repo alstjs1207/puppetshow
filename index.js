@@ -25,6 +25,12 @@ app.use('/.ping', (req, res) => {
   res.json('pong!');
 });
 
+app.post('/EmployeeBulkCreate', (req, res) => {
+  const { hashValue } = JSON.parse(req.body);
+  console.log(hashValue);
+  res.json(hashValue);
+});
+
 app.post('/pdf', (req, res) => {
   const { html } = req.body;
   printPDF(html)
@@ -40,7 +46,7 @@ app.use((req, res) => {
   res.send('restricted area!');
 });
 
-const { port = 3000 } = process.env;
+const { port = 3001 } = process.env;
 
 app.listen(port, () => {
   console.log(`listen on http://localhost:${port}`);

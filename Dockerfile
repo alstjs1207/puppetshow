@@ -2,8 +2,8 @@ FROM node:16-alpine
 WORKDIR /app
 COPY package*.json ./
 
-ENV PORT=3000
-EXPOSE 3000
+ENV PORT=3001
+EXPOSE 3001
 
 # install chromium
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
